@@ -40,6 +40,11 @@ pnpm typecheck        # token contract + contrast check + TypeScript
 pnpm build-storybook  # static Storybook in storybook/storybook-static
 ```
 
+## Guides
+
+- [Criar um componente pelo código](docs/guides/criar-componente-pelo-codigo.md)
+- [Criar um componente a partir do Figma](docs/guides/criar-componente-pelo-figma.md)
+
 ## Using it in a product
 
 ```jsx
