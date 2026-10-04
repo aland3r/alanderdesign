@@ -101,7 +101,7 @@ function Welcome() {
           <Text>Envolva o app no BrandProvider com a marca do produto e use os componentes:</Text>
           <pre style={code}>{`import { BrandProvider, Button } from '@alander/react'
 
-<BrandProvider brand="flashbrix">
+<BrandProvider brand="base">
   <Button>Começar</Button>
 </BrandProvider>`}</pre>
           <Text>
