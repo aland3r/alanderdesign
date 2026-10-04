@@ -17,6 +17,11 @@
       "input": {
         "$type": "color",
         "$value": "{color.gray.50}"
+      },
+      "overlay": {
+        "$type": "color",
+        "$value": "{color.alpha.black50}",
+        "$description": "Scrim behind a dialog"
       }
     },
     "text": {

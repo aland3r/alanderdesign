@@ -1,0 +1,28 @@
+/* Adds to the shared field styles in TextField.module.css. */
+.wrap {
+  position: relative;
+  display: flex;
+  color: var(--color-text-muted);
+}
+
+select.select {
+  flex: 1;
+  min-width: 0;
+  padding-right: calc(var(--space-inset-md) * 2 + 8px);
+  appearance: none;
+  cursor: pointer;
+}
+
+/* The chevron, drawn so it takes the token color. */
+.wrap::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: var(--space-inset-md);
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-75%) rotate(45deg);
+  pointer-events: none;
+}

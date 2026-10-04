@@ -1,0 +1,39 @@
+.scroll {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-small);
+  color: var(--color-text-default);
+}
+
+/* Visible to screen readers only. */
+.caption {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.table th,
+.table td {
+  padding: var(--space-inset-sm) var(--space-inset-md);
+  border-bottom: 1px solid var(--color-border-default);
+  text-align: start;
+}
+
+.table th {
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-label);
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.table tbody tr:hover {
+  background: var(--color-background-input);
+}

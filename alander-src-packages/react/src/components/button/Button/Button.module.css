@@ -43,6 +43,29 @@
   border-color: var(--color-border-hover);
 }
 
+.ghost {
+  background: transparent;
+  color: var(--color-text-strong);
+}
+
+.ghost:hover:not(:disabled) {
+  background: var(--color-background-input);
+}
+
+.danger {
+  background: var(--color-feedback-error-background);
+  color: var(--color-feedback-error-text);
+}
+
+.danger:hover:not(:disabled) {
+  border-color: var(--color-feedback-error-text);
+}
+
+.sm {
+  min-height: var(--size-control-height-sm);
+  font-size: var(--font-size-caption);
+}
+
 .fullWidth {
   width: 100%;
 }

@@ -1,0 +1,6 @@
+/* Adds to the shared field styles in TextField.module.css. */
+textarea.textarea {
+  padding: var(--space-inset-sm) var(--space-inset-md);
+  line-height: var(--font-line-height-body);
+  resize: vertical;
+}

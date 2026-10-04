@@ -1,0 +1,75 @@
+.dialog {
+  width: min(480px, calc(100vw - 2 * var(--space-inset-md)));
+  padding: 0;
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-surface);
+  background: var(--color-background-surface);
+  color: var(--color-text-default);
+  font-family: var(--font-family-body);
+}
+
+.dialog::backdrop {
+  background: var(--color-background-overlay);
+}
+
+/* The padding lives here so a click on the dialog element is always the backdrop. */
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-stack-sm);
+  padding: var(--space-inset-lg);
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-inset-md);
+}
+
+.title {
+  margin: 0;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-label);
+  line-height: var(--font-line-height-heading);
+  color: var(--color-text-strong);
+}
+
+.description {
+  margin: 0;
+  font-size: var(--font-size-small);
+  color: var(--color-text-muted);
+}
+
+.close {
+  display: inline-grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-control);
+  background: none;
+  color: var(--color-text-muted);
+  cursor: pointer;
+}
+
+.close svg {
+  width: 16px;
+  height: 16px;
+}
+
+.close:hover {
+  color: var(--color-text-strong);
+}
+
+.close:focus-visible {
+  outline: 3px solid var(--color-focus-ring);
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-inset-sm);
+}

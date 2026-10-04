@@ -55,6 +55,10 @@
       "blue35": {
         "$type": "color",
         "$value": "rgba(29, 78, 216, 0.35)"
+      },
+      "black50": {
+        "$type": "color",
+        "$value": "rgba(0, 0, 0, 0.50)"
       }
     },
     "white": {

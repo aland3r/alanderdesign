@@ -7,7 +7,7 @@ const repo = 'https://github.com/aland3r/alanderdesign/blob/main'
 const sections = [
   { name: 'Patterns', what: 'Ready-made screens and blocks, like each product’s login.' },
   { name: 'Foundations', what: 'The tokens: color, typography, spacing and radii, with each brand’s value.' },
-  { name: 'Families', what: 'The components, grouped by family: Button, Field, Link, Alert, Text, Logo.' },
+  { name: 'Families', what: 'The components, grouped by family: Button, Field, Link, Alert, Text, Logo, Badge, Card, Avatar, Dialog, Menu, Tabs, Table, Separator.' },
 ]
 
 const status: { component: string; family: string; state: 'Ready' | 'In progress' | 'Planned' }[] = [
@@ -15,10 +15,20 @@ const status: { component: string; family: string; state: 'Ready' | 'In progress
   { component: 'SocialButton', family: 'button', state: 'Ready' },
   { component: 'TextField', family: 'field', state: 'Ready' },
   { component: 'SearchField', family: 'field', state: 'Ready' },
+  { component: 'TextArea', family: 'field', state: 'Ready' },
+  { component: 'Select', family: 'field', state: 'Ready' },
   { component: 'Link', family: 'link', state: 'Ready' },
   { component: 'Alert', family: 'alert', state: 'Ready' },
   { component: 'Text, Heading', family: 'text', state: 'Ready' },
   { component: 'Logo', family: 'logo', state: 'Ready' },
+  { component: 'Badge', family: 'badge', state: 'Ready' },
+  { component: 'Card', family: 'card', state: 'Ready' },
+  { component: 'Avatar', family: 'avatar', state: 'Ready' },
+  { component: 'Dialog, ConfirmDialog', family: 'dialog', state: 'Ready' },
+  { component: 'Menu', family: 'menu', state: 'Ready' },
+  { component: 'Tabs', family: 'tabs', state: 'Ready' },
+  { component: 'Table', family: 'table', state: 'Ready' },
+  { component: 'Separator', family: 'separator', state: 'Ready' },
   { component: 'AuthLayout, LoginForm', family: 'pattern', state: 'Ready' },
   { component: 'Accordion', family: 'accordion', state: 'Planned' },
 ]
