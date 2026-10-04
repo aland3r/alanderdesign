@@ -1,6 +1,6 @@
 {
   "name": "@alander/tokens",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Alander Design System (ADS) design tokens: a neutral base plus per-brand overrides, in two layers (primitive and semantic).",
   "type": "module",
   "files": [
@@ -14,6 +14,7 @@
   },
   "scripts": {
     "build": "node build.mjs",
+    "prepack": "node build.mjs",
     "typecheck": "node build.mjs --check && node build.mjs && node check-contrast.mjs"
   },
   "devDependencies": {

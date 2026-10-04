@@ -47,7 +47,16 @@ pnpm build-storybook  # static Storybook in storybook/storybook-static
 
 ## Using it in a product
 
+Install the published package by URL. It works with npm, pnpm and yarn, and on Vercel, with no token or registry setup:
+
+```sh
+npm install https://github.com/aland3r/alanderdesign/releases/download/v0.2.0/alander-react-0.2.0.tgz
+```
+
+`@alander/react` is self-contained: its stylesheet already includes every brand's tokens. Install `alander-tokens-<version>.tgz` from the same release only if the product reads token values directly, or uses TypeScript.
+
 ```jsx
+import '@alander/react/styles.css' // once, in the app entry file
 import { AuthLayout, BrandProvider, LoginForm } from '@alander/react'
 
 <BrandProvider brand="flashbrix">
@@ -56,6 +65,24 @@ import { AuthLayout, BrandProvider, LoginForm } from '@alander/react'
   </AuthLayout>
 </BrandProvider>
 ```
+
+## Publishing
+
+A release is a version tag. Pushing it runs `.github/workflows/release.yml`, which type-checks, builds both packages and attaches them to a GitHub Release as tarballs.
+
+1. Set the same new `version` in `alander-src-packages/react/package.json` and `alander-src-packages/tokens/package.json`.
+2. Commit, then tag and push:
+
+```sh
+git tag v0.3.0
+git push origin main v0.3.0
+```
+
+3. In each product, install the new URL (`.../download/v0.3.0/alander-react-0.3.0.tgz`).
+
+`pnpm release:pack` builds the same tarballs into `release/` on your machine. To try a change in a product before releasing, install that local file: `npm install ../alanderdesign/release/alander-react-<version>.tgz`.
+
+Inside this repository nothing changes: Storybook reads the packages straight from `src`.
 
 ## Sources for the brand values
 

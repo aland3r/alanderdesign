@@ -6,6 +6,7 @@
   "scripts": {
     "tokens": "pnpm --filter @alander/tokens build",
     "typecheck": "pnpm -r typecheck",
+    "release:pack": "pnpm --filter @alander/tokens --filter @alander/react exec pnpm pack --pack-destination ../../release",
     "storybook": "pnpm tokens && pnpm --filter storybook dev",
     "build-storybook": "pnpm tokens && pnpm --filter storybook build"
   }

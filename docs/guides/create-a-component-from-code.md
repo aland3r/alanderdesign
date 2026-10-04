@@ -31,13 +31,16 @@ Switching brands happens on its own: `BrandProvider` sets `data-brand="flashbrix
 In the product project (for example `C:\gestalt\flashbrix-web`):
 
 ```sh
-pnpm add @alander/react@link:../alanderdesign/alander-src-packages/react
-pnpm add @alander/tokens@link:../alanderdesign/alander-src-packages/tokens
+npm install https://github.com/aland3r/alanderdesign/releases/download/v0.2.0/alander-react-0.2.0.tgz
 ```
 
-`link:` points at the local folder, so a change in ADS shows up in the product right away. For deploys (Vercel) the packages need to be published; until then this only works on your machine.
+This installs the published package, so it also works on deploys (Vercel). Replace `0.2.0` with the version you want; the versions are listed under Releases in the ADS repository. To try an ADS change before it is published, see "Publishing" in the README.
 
-Wrap the app in `BrandProvider` once, at the top:
+Load the styles once, in the app entry file, then wrap the app in `BrandProvider`, at the top:
+
+```tsx
+import '@alander/react/styles.css'
+```
 
 ```tsx
 // src/main.tsx
