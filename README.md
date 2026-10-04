@@ -11,7 +11,7 @@ One set of components for Portfolio, Deviante and Flashbrix. Each product is a *
 
 Components read semantic tokens only. There is no component-token layer: when a component needs something of its own, add a more specific semantic token to the base.
 
-Components are organized in families, one folder each under `alander-src-packages/react/src/components/`: `button` (Button, SocialButton), `field` (TextField), `link`, `alert`, `text` (Text, Heading), `logo`. Families are an organization, not a token layer: Storybook groups stories under `Families/<family>`, and the token table has a view of which semantic tokens each family reads, taken from its styles. A new component (an accordion, say) gets a new family folder.
+Components are organized in families, one folder each under `alander-src-packages/react/src/components/`: `button` (Button, SocialButton), `field` (TextField, SearchField), `link`, `alert`, `text` (Text, Heading), `logo`. Families are an organization, not a token layer: Storybook groups stories under `Families/<family>`, and the token table has a view of which semantic tokens each family reads, taken from its styles. A new component (an accordion, say) gets a new family folder.
 
 Breakpoints: tablet from 768px, desktop from 1024px. `font.size.headline.{mobile,tablet,desktop}` is the landing-page highlight (`<Heading size="headline">`); Flashbrix sets it to 32/68/74px in EB Garamond.
 

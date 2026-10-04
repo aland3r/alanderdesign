@@ -244,6 +244,10 @@
       "height": {
         "$type": "dimension",
         "$value": "{size.control.md}"
+      },
+      "heightSm": {
+        "$type": "dimension",
+        "$value": "{size.control.sm}"
       }
     }
   }

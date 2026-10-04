@@ -1,0 +1,62 @@
+/* The box is the wrapper, so the icon sits in the flow and focus shows on the whole field. */
+.field {
+  display: flex;
+  align-items: center;
+  gap: var(--space-inset-sm);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-control);
+  background: var(--color-background-input);
+  color: var(--color-text-muted);
+  font-family: var(--font-family-body);
+}
+
+.md {
+  min-height: var(--size-control-height);
+  padding: 0 var(--space-inset-md);
+  font-size: var(--font-size-body);
+}
+
+.sm {
+  min-height: var(--size-control-height-sm);
+  padding: 0 var(--space-inset-sm);
+  font-size: var(--font-size-caption);
+}
+
+.field:hover:not(:has(:disabled)) {
+  border-color: var(--color-border-hover);
+}
+
+.field:focus-within {
+  outline: 3px solid var(--color-focus-ring);
+  border-color: var(--color-border-focus);
+}
+
+.field:has(:disabled) {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.icon {
+  flex-shrink: 0;
+  width: 1.1em;
+  height: 1.1em;
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  background: none;
+  font: inherit;
+  color: var(--color-text-strong);
+}
+
+.input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.input:disabled {
+  cursor: not-allowed;
+}

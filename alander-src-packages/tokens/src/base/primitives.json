@@ -209,6 +209,11 @@
   },
   "size": {
     "control": {
+      "sm": {
+        "$type": "dimension",
+        "$value": "34px",
+        "$description": "Compact controls in toolbars, as in the Deviante dashboard"
+      },
       "md": {
         "$type": "dimension",
         "$value": "48px"

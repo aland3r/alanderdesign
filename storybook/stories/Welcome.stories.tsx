@@ -14,7 +14,7 @@ const status: { component: string; family: string; state: 'Ready' | 'In progress
   { component: 'Button', family: 'button', state: 'Ready' },
   { component: 'SocialButton', family: 'button', state: 'Ready' },
   { component: 'TextField', family: 'field', state: 'Ready' },
-  { component: 'SearchField', family: 'field', state: 'In progress' },
+  { component: 'SearchField', family: 'field', state: 'Ready' },
   { component: 'Link', family: 'link', state: 'Ready' },
   { component: 'Alert', family: 'alert', state: 'Ready' },
   { component: 'Text, Heading', family: 'text', state: 'Ready' },
