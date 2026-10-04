@@ -1,5 +1,5 @@
 import type { AnchorHTMLAttributes } from 'react'
-import { cx } from '../../utils/cx'
+import { cx } from '../../../utils/cx'
 import styles from './Link.module.css'
 
 export type LinkProps = AnchorHTMLAttributes<HTMLAnchorElement>

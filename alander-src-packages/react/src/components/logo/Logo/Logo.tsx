@@ -1,6 +1,6 @@
-import { useBrand, useBrandConfig } from '../../brand/BrandProvider'
-import flashbrixIsotype from '../../assets/brand/flashbrix-isotype.svg'
-import { cx } from '../../utils/cx'
+import { useBrand, useBrandConfig } from '../../../brand/BrandProvider'
+import flashbrixIsotype from '../../../assets/brand/flashbrix-isotype.svg'
+import { cx } from '../../../utils/cx'
 import styles from './Logo.module.css'
 
 export interface LogoProps {

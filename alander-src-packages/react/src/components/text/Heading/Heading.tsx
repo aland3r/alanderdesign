@@ -1,10 +1,11 @@
 import type { ReactNode } from 'react'
-import { cx } from '../../utils/cx'
+import { cx } from '../../../utils/cx'
 import styles from './Heading.module.css'
 
 export interface HeadingProps {
   level?: 1 | 2 | 3
-  size?: 'title' | 'display'
+  /** `headline` is the landing-page highlight; it grows at the tablet and desktop breakpoints. */
+  size?: 'title' | 'display' | 'headline'
   align?: 'start' | 'center'
   className?: string
   children: ReactNode

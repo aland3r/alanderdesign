@@ -104,6 +104,10 @@
       "brand": {
         "$type": "fontFamily",
         "$value": "{fontFamily.tijolo}"
+      },
+      "headline": {
+        "$type": "fontFamily",
+        "$value": "{fontFamily.ebGaramond}"
       }
     },
     "weight": {
@@ -114,6 +118,22 @@
       "brand": {
         "$type": "fontWeight",
         "$value": "{fontWeight.medium}"
+      }
+    },
+    "size": {
+      "headline": {
+        "mobile": {
+          "$type": "dimension",
+          "$value": "{fontSize.32}"
+        },
+        "tablet": {
+          "$type": "dimension",
+          "$value": "{fontSize.68}"
+        },
+        "desktop": {
+          "$type": "dimension",
+          "$value": "{fontSize.74}"
+        }
       }
     }
   },

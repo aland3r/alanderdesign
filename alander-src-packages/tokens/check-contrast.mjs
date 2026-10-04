@@ -11,21 +11,10 @@ const pairs = [
   ['ColorTextOnAction', 'ColorActionPrimary'],
   ['ColorTextOnAction', 'ColorActionPrimaryHover'],
   ['ColorFeedbackErrorText', 'ColorBackgroundSurface'],
+  ['ColorFeedbackErrorText', 'ColorFeedbackErrorBackground'],
   ['ColorTextBrand', 'ColorBackgroundSurface'],
   ['ColorTextOnHero', 'ColorBackgroundHero'],
   ['ColorTextOnHeroAccent', 'ColorBackgroundHero'],
-  // Family pairs, as the components render them.
-  ['ButtonPrimaryText', 'ButtonPrimaryBackground'],
-  ['ButtonPrimaryText', 'ButtonPrimaryBackgroundHover'],
-  ['ButtonSecondaryText', 'ButtonSecondaryBackground'],
-  ['FieldText', 'FieldBackground'],
-  ['FieldLabelText', 'SurfaceCardBackground'],
-  ['FieldErrorText', 'SurfaceCardBackground'],
-  ['LinkText', 'SurfaceCardBackground'],
-  ['AlertErrorText', 'AlertErrorBackground'],
-  ['LogoText', 'SurfaceCardBackground'],
-  ['SurfaceHeroText', 'SurfaceHeroBackground'],
-  ['SurfaceHeroAccent', 'SurfaceHeroBackground'],
 ]
 
 const channel = (c) => {

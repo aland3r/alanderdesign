@@ -29,3 +29,8 @@ export const Body: Story = {
     </>
   ),
 }
+
+/** Landing-page highlight. Resize the canvas (or use the viewport toolbar) to see mobile, tablet and desktop sizes. */
+export const Headline: Story = {
+  render: () => <Heading size="headline">Aprenda com flashcards</Heading>,
+}

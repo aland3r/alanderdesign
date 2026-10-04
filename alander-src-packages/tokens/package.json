@@ -1,7 +1,7 @@
 {
   "name": "@alander/tokens",
   "version": "0.1.0",
-  "description": "Alander Design System (ADS) design tokens: a neutral base plus per-brand overrides, in three layers (primitive, semantic and component families).",
+  "description": "Alander Design System (ADS) design tokens: a neutral base plus per-brand overrides, in two layers (primitive and semantic).",
   "type": "module",
   "files": [
     "dist",

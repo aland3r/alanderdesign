@@ -1,0 +1,39 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-inset-sm);
+  color: var(--color-text-brand);
+  font-family: var(--font-family-brand);
+  font-weight: var(--font-weight-brand);
+  text-transform: var(--font-case-brand);
+  line-height: 1;
+}
+
+.md { font-size: var(--font-size-body); }
+.lg { font-size: var(--font-size-title); }
+
+.isotype {
+  width: 1.6em;
+  height: 1.6em;
+}
+
+.devianteMark {
+  display: inline-grid;
+  place-items: center;
+  width: 1.75em;
+  height: 1.75em;
+  border-radius: var(--radius-control);
+  background: var(--color-action-primary-hover);
+}
+
+.lg .devianteMark svg {
+  width: 0.9em;
+  height: 0.9em;
+}
+
+.baseMark {
+  width: 1.25em;
+  height: 1.25em;
+  border-radius: var(--radius-control);
+  background: var(--color-action-primary);
+}

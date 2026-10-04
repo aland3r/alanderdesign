@@ -1,5 +1,5 @@
 import type { ElementType, ReactNode } from 'react'
-import { cx } from '../../utils/cx'
+import { cx } from '../../../utils/cx'
 import styles from './Text.module.css'
 
 export interface TextProps {

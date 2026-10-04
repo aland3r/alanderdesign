@@ -1,18 +1,15 @@
 // Builds the ADS tokens for the base theme and every brand with Style Dictionary.
 //
-// Three layers:
+// Two layers only:
 //   1. primitives  src/base/primitives.json, then src/brands/<brand>/primitives.json
 //   2. semantic    src/base/semantic.json,   then src/brands/<brand>/semantic.json
-//   3. families    src/base/families/*.json, then src/brands/<brand>/families/*.json
 //
-// The base defines the full contract with a neutral palette and is a theme of
-// its own ("base"). A brand overrides only what differs; anything it leaves out
-// falls back to the base. A brand may not add names the base does not have,
-// which keeps the contract identical everywhere.
+// The base defines the full semantic contract with a neutral palette and is a
+// theme of its own ("base"). A brand overrides only what differs; anything it
+// leaves out falls back to the base. A brand may not add semantic names the
+// base does not have, which keeps the contract identical everywhere.
 //
-// Family tokens (button.*, field.*) point at semantic tokens. Each component
-// reads only its own family. Semantic and family tokens are emitted; primitives
-// are not.
+// Components read semantic tokens only, so only semantic tokens are emitted.
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -24,8 +21,6 @@ const themes = ['base', ...brands]
 const checkOnly = process.argv.includes('--check')
 
 const isSemantic = (token) => token.filePath.endsWith('semantic.json')
-const isFamily = (token) => token.filePath.includes('/families/')
-const isPublic = (token) => isSemantic(token) || isFamily(token)
 
 function sourcesFor(theme) {
   const brand = (layer) => (theme === 'base' ? [] : [`src/brands/${theme}/${layer}.json`])
@@ -34,8 +29,6 @@ function sourcesFor(theme) {
     ...brand('primitives'),
     'src/base/semantic.json',
     ...brand('semantic'),
-    'src/base/families/*.json',
-    ...(theme === 'base' ? [] : [`src/brands/${theme}/families/*.json`]),
   ]
 }
 
@@ -52,7 +45,7 @@ function dictionaryFor(theme) {
           {
             destination: `${theme}.css`,
             format: 'css/variables',
-            filter: isPublic,
+            filter: isSemantic,
             options: { selector: `[data-brand="${theme}"]`, outputReferences: false },
           },
         ],
@@ -60,7 +53,7 @@ function dictionaryFor(theme) {
       json: {
         transformGroup: 'js',
         buildPath: 'dist/json/',
-        files: [{ destination: `${theme}.json`, format: 'json/flat', filter: isPublic }],
+        files: [{ destination: `${theme}.json`, format: 'json/flat', filter: isSemantic }],
       },
     },
   })
@@ -73,15 +66,13 @@ let catalog = []
 for (const theme of themes) {
   const sd = dictionaryFor(theme)
   const { allTokens } = await sd.getPlatformTokens('css')
-  const emitted = allTokens.filter(isPublic)
-  names[theme] = emitted.map((t) => t.name).sort()
-  overrides[theme] = emitted.filter((t) => t.filePath.includes('/brands/')).length
+  const semantic = allTokens.filter(isSemantic)
+  names[theme] = semantic.map((t) => t.name).sort()
+  overrides[theme] = semantic.filter((t) => t.filePath.includes('/brands/')).length
   if (theme === 'base') {
-    catalog = emitted.map((t) => ({
-      name: t.name,
-      layer: isFamily(t) ? 'family' : 'semantic',
-      group: t.path[0] === 'color' || t.path[0] === 'font' ? t.path.slice(0, 2).join('.') : t.path[0],
-    }))
+    // Group for the Storybook token table: color.text, font.size, radius, ...
+    const group = (p) => (p[0] === 'color' || p[0] === 'font' ? p.slice(0, 2) : p.slice(0, 1)).join('.')
+    catalog = semantic.map((t) => ({ name: t.name, group: group(t.path) }))
   }
   if (!checkOnly) await sd.buildAllPlatforms()
 }
@@ -92,15 +83,14 @@ for (const brand of brands) {
   const extra = names[brand].filter((n) => !names.base.includes(n))
   if (extra.length) {
     broken = true
-    console.error(`${brand} defines tokens the base does not have: ${extra.join(', ')}`)
+    console.error(`${brand} defines semantic tokens the base does not have: ${extra.join(', ')}`)
   }
 }
 if (broken) process.exit(1)
 
 const summary = brands.map((b) => `${b} overrides ${overrides[b]}`).join(', ')
 if (checkOnly) {
-  const families = catalog.filter((t) => t.layer === 'family').length
-  console.log(`Contract OK: ${names.base.length - families} semantic + ${families} family tokens; ${summary}`)
+  console.log(`Semantic contract OK: ${names.base.length} tokens; ${summary}`)
   process.exit(0)
 }
 
@@ -120,7 +110,7 @@ fs.writeFileSync(
     `export declare const brands: Brand[]\n` +
     `export type TokenName = ${names.base.map((n) => `'${n}'`).join('\n  | ')}\n` +
     `export declare const tokens: Record<TokenName, string>\n` +
-    `export declare const catalog: { name: TokenName; layer: 'semantic' | 'family'; group: string }[]\n`,
+    `export declare const catalog: { name: TokenName; group: string }[]\n`,
 )
 
-console.log(`Built ${names.base.length} tokens for ${themes.join(', ')}`)
+console.log(`Built ${names.base.length} semantic tokens for ${themes.join(', ')}`)

@@ -1,5 +1,5 @@
 import { useId, type InputHTMLAttributes } from 'react'
-import { cx } from '../../utils/cx'
+import { cx } from '../../../utils/cx'
 import styles from './TextField.module.css'
 
 export interface TextFieldProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size'> {

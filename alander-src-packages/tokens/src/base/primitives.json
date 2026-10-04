@@ -169,6 +169,14 @@
     "40": {
       "$type": "dimension",
       "$value": "40px"
+    },
+    "48": {
+      "$type": "dimension",
+      "$value": "48px"
+    },
+    "56": {
+      "$type": "dimension",
+      "$value": "56px"
     }
   },
   "fontWeight": {

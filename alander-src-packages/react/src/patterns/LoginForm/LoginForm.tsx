@@ -1,9 +1,9 @@
 import type { ReactNode } from 'react'
-import { Alert } from '../../components/Alert/Alert'
-import { Heading } from '../../components/Heading/Heading'
-import { Logo } from '../../components/Logo/Logo'
-import { SocialButton } from '../../components/SocialButton/SocialButton'
-import { Text } from '../../components/Text/Text'
+import { Alert } from '../../components/alert/Alert/Alert'
+import { Heading } from '../../components/text/Heading/Heading'
+import { Logo } from '../../components/logo/Logo/Logo'
+import { SocialButton } from '../../components/button/SocialButton/SocialButton'
+import { Text } from '../../components/text/Text/Text'
 import styles from './LoginForm.module.css'
 
 export interface LoginFormProps {

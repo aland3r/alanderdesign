@@ -1,9 +1,0 @@
-.alert {
-  padding: var(--alert-padding-y) var(--alert-padding-x);
-  border-radius: var(--alert-radius);
-  font-size: var(--alert-font-size);
-}
-.error {
-  background: var(--alert-error-background);
-  color: var(--alert-error-text);
-}

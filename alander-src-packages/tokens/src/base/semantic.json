@@ -117,6 +117,21 @@
       "display": {
         "$type": "dimension",
         "$value": "{fontSize.40}"
+      },
+      "headline": {
+        "$description": "Landing-page highlight text. Mobile below 768px, tablet from 768px, desktop from 1024px.",
+        "mobile": {
+          "$type": "dimension",
+          "$value": "{fontSize.32}"
+        },
+        "tablet": {
+          "$type": "dimension",
+          "$value": "{fontSize.48}"
+        },
+        "desktop": {
+          "$type": "dimension",
+          "$value": "{fontSize.56}"
+        }
       }
     },
     "weight": {
@@ -159,6 +174,10 @@
       "brand": {
         "$type": "fontFamily",
         "$value": "{fontFamily.system}"
+      },
+      "headline": {
+        "$type": "fontFamily",
+        "$value": "{font.family.heading}"
       }
     },
     "case": {
