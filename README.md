@@ -2,16 +2,19 @@
 
 One set of components for Portfolio, Deviante and Flashbrix. Each product is a **brand** on top of a neutral **base** theme: the components are the same, only the tokens change.
 
-## Tokens: two layers
+## Tokens: three layers
 
 | Layer | Where | What it holds |
 | --- | --- | --- |
 | Primitive | `src/base/primitives.json`, `src/brands/<brand>/primitives.json` | Raw values: the neutral palette, each brand's palette and fonts, shared spacing, radii and type scale |
-| Semantic | `src/base/semantic.json`, `src/brands/<brand>/semantic.json` | Names with intent (`color.action.primary`, `radius.control`). The base defines the whole contract; a brand overrides only what differs and inherits the rest |
+| Semantic | `src/base/semantic.json`, `src/brands/<brand>/semantic.json` | Names with intent (`color.action.primary`, `radius.control`), pointing at primitives |
+| Family | `src/base/families/<family>.json`, `src/brands/<brand>/families/<family>.json` | One group per component family (`button.primary.background`, `field.border.focus`), pointing at semantic tokens |
 
-Components read semantic tokens only. There is no component-token layer: when a component needs something of its own, add a more specific semantic token to the base.
+Families today: `button` (Button, SocialButton), `field` (TextField), `link`, `alert`, `text` (Text, Heading), `logo`, `surface` (page, card and hero in AuthLayout). A new component family, such as `accordion`, gets its own file.
 
-The build fails if a brand adds a semantic name the base does not have, or if a text/background pair the components use drops below WCAG AA.
+Each component reads only its own family's tokens. Patterns may also use semantic spacing for layout. The base defines the whole contract; a brand overrides only what differs and inherits the rest. A brand overrides a family token only when that component should differ from the brand's semantic default (Deviante's logo mark, for example).
+
+The build fails if a brand adds a name the base does not have, or if a text/background pair the components use drops below WCAG AA.
 
 Themes: `base` (neutral ADS, the Storybook default), `portfolio`, `deviante`, `flashbrix`.
 

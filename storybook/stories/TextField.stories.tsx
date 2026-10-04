@@ -3,7 +3,7 @@ import { TextField } from '@alander/react'
 import { Canvas } from './Canvas'
 
 const meta = {
-  title: 'Components/TextField',
+  title: 'Families/Field/TextField',
   component: TextField,
   decorators: [(Story) => <Canvas><div style={{ width: 360 }}><Story /></div></Canvas>],
   args: { label: 'E-mail', placeholder: 'voce@empresa.com', type: 'email' },

@@ -1,20 +1,20 @@
 .page {
   min-height: 100vh;
-  background: var(--color-background-page);
+  background: var(--surface-page-background);
 }
 
 /* Centered: one card on the page background (Flashbrix). */
 .centered {
   display: grid;
   place-items: center;
-  padding: var(--space-inset-lg) var(--space-inset-md);
+  padding: var(--surface-page-padding-y) var(--surface-page-padding-x);
 }
 
 .card {
   width: min(448px, 100%);
-  padding: var(--space-stack-xl) var(--space-inset-lg);
-  border-radius: var(--radius-surface);
-  background: var(--color-background-surface);
+  padding: var(--surface-card-padding-y) var(--surface-card-padding-x);
+  border-radius: var(--surface-card-radius);
+  background: var(--surface-card-background);
 }
 
 /* Split: form on one side, brand hero on the other (Deviante). */
@@ -27,8 +27,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--space-stack-xl) var(--space-inset-lg);
-  background: var(--color-background-surface);
+  padding: var(--surface-card-padding-y) var(--surface-card-padding-x);
+  background: var(--surface-card-background);
 }
 
 .formInner {
@@ -39,8 +39,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--space-stack-xl) var(--space-inset-lg);
-  background: var(--color-background-hero);
+  padding: var(--surface-card-padding-y) var(--surface-card-padding-x);
+  background: var(--surface-hero-background);
 }
 
 .heroContent {
@@ -48,22 +48,22 @@
 }
 
 .heroEyebrow {
-  margin: 0 0 var(--space-stack-sm);
-  font-size: var(--font-size-caption);
-  font-weight: var(--font-weight-label);
+  margin: 0 0 var(--surface-hero-eyebrow-gap);
+  font-size: var(--surface-hero-eyebrow-size);
+  font-weight: var(--surface-hero-eyebrow-weight);
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--color-text-on-hero-accent);
+  color: var(--surface-hero-accent);
 }
 
 .heroHeadline {
   margin: 0;
-  font-family: var(--font-family-heading);
-  font-size: var(--font-size-display);
-  font-weight: var(--font-weight-heading);
-  line-height: var(--font-line-height-heading);
-  color: var(--color-text-on-hero);
-  text-transform: var(--font-case-heading);
+  font-family: var(--surface-hero-headline-family);
+  font-size: var(--surface-hero-headline-size);
+  font-weight: var(--surface-hero-headline-weight);
+  line-height: var(--surface-hero-headline-line-height);
+  color: var(--surface-hero-text);
+  text-transform: var(--surface-hero-headline-case);
 }
 
 @media (max-width: 800px) {

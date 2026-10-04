@@ -1,0 +1,10 @@
+{
+  "logo": {
+    "mark": {
+      "background": {
+        "$type": "color",
+        "$value": "{color.action.primaryHover}"
+      }
+    }
+  }
+}

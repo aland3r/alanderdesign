@@ -1,36 +1,36 @@
 .field {
   display: flex;
   flex-direction: column;
-  gap: var(--space-stack-xs);
+  gap: var(--field-gap);
 }
 
 .label {
-  font-size: var(--font-size-small);
-  font-weight: var(--font-weight-label);
-  color: var(--color-text-strong);
+  font-size: var(--field-label-size);
+  font-weight: var(--field-label-weight);
+  color: var(--field-label-text);
 }
 
 .input {
-  min-height: var(--size-control-height);
-  padding: 0 var(--space-inset-md);
-  border: 1px solid var(--color-border-default);
-  border-radius: var(--radius-control);
-  background: var(--color-background-input);
-  color: var(--color-text-strong);
+  min-height: var(--field-height);
+  padding: 0 var(--field-padding-x);
+  border: 1px solid var(--field-border-default);
+  border-radius: var(--field-radius);
+  background: var(--field-background);
+  color: var(--field-text);
   font: inherit;
 }
 
 .input::placeholder {
-  color: var(--color-text-muted);
+  color: var(--field-placeholder);
 }
 
 .input:hover:not(:disabled) {
-  border-color: var(--color-border-hover);
+  border-color: var(--field-border-hover);
 }
 
 .input:focus {
-  outline: 3px solid var(--color-focus-ring);
-  border-color: var(--color-border-focus);
+  outline: 3px solid var(--field-focus-ring);
+  border-color: var(--field-border-focus);
 }
 
 .input:disabled {
@@ -40,15 +40,15 @@
 
 .invalid,
 .invalid:hover:not(:disabled) {
-  border-color: var(--color-feedback-error-text);
+  border-color: var(--field-border-error);
 }
 
 .message {
   margin: 0;
-  font-size: var(--font-size-caption);
-  color: var(--color-text-muted);
+  font-size: var(--field-hint-size);
+  color: var(--field-hint-text);
 }
 
 .errorMessage {
-  color: var(--color-feedback-error-text);
+  color: var(--field-error-text);
 }

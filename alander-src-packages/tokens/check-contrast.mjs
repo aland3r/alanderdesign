@@ -14,6 +14,18 @@ const pairs = [
   ['ColorTextBrand', 'ColorBackgroundSurface'],
   ['ColorTextOnHero', 'ColorBackgroundHero'],
   ['ColorTextOnHeroAccent', 'ColorBackgroundHero'],
+  // Family pairs, as the components render them.
+  ['ButtonPrimaryText', 'ButtonPrimaryBackground'],
+  ['ButtonPrimaryText', 'ButtonPrimaryBackgroundHover'],
+  ['ButtonSecondaryText', 'ButtonSecondaryBackground'],
+  ['FieldText', 'FieldBackground'],
+  ['FieldLabelText', 'SurfaceCardBackground'],
+  ['FieldErrorText', 'SurfaceCardBackground'],
+  ['LinkText', 'SurfaceCardBackground'],
+  ['AlertErrorText', 'AlertErrorBackground'],
+  ['LogoText', 'SurfaceCardBackground'],
+  ['SurfaceHeroText', 'SurfaceHeroBackground'],
+  ['SurfaceHeroAccent', 'SurfaceHeroBackground'],
 ]
 
 const channel = (c) => {
@@ -23,6 +35,15 @@ const channel = (c) => {
 const luminance = (hex) => {
   const [r, g, b] = [1, 3, 5].map((i) => channel(parseInt(hex.slice(i, i + 2), 16)))
   return 0.2126 * r + 0.7152 * g + 0.0722 * b
+}
+// A translucent background (#rrggbbaa) is blended over the surface it sits on.
+const blend = (hex, over) => {
+  if (hex.length !== 9) return hex
+  const a = parseInt(hex.slice(7, 9), 16) / 255
+  const mix = [1, 3, 5].map((i) =>
+    Math.round(parseInt(hex.slice(i, i + 2), 16) * a + parseInt(over.slice(i, i + 2), 16) * (1 - a)),
+  )
+  return `#${mix.map((c) => c.toString(16).padStart(2, '0')).join('')}`
 }
 const ratio = (a, b) => {
   const [hi, lo] = [luminance(a), luminance(b)].sort((x, y) => y - x)
@@ -34,7 +55,7 @@ for (const file of fs.readdirSync('dist/json')) {
   const brand = file.replace('.json', '')
   const tokens = JSON.parse(fs.readFileSync(`dist/json/${file}`, 'utf8'))
   for (const [fg, bg] of pairs) {
-    const r = ratio(tokens[fg], tokens[bg])
+    const r = ratio(tokens[fg], blend(tokens[bg], tokens.ColorBackgroundSurface))
     if (r < 4.5) {
       failed = true
       console.error(`${brand}: ${fg} on ${bg} is ${r.toFixed(2)}:1 (needs 4.5:1)`)

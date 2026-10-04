@@ -1,13 +1,13 @@
 .text {
   margin: 0;
-  font-family: var(--font-family-body);
-  line-height: var(--font-line-height-body);
+  font-family: var(--text-body-family);
+  line-height: var(--text-body-line-height);
 }
-.body { font-size: var(--font-size-body); }
-.small { font-size: var(--font-size-small); }
-.caption { font-size: var(--font-size-caption); }
-.default { color: var(--color-text-default); }
-.strong { color: var(--color-text-strong); }
-.muted { color: var(--color-text-muted); }
+.body { font-size: var(--text-body-size-body); }
+.small { font-size: var(--text-body-size-small); }
+.caption { font-size: var(--text-body-size-caption); }
+.default { color: var(--text-body-color-default); }
+.strong { color: var(--text-body-color-strong); }
+.muted { color: var(--text-body-color-muted); }
 .start { text-align: start; }
 .center { text-align: center; }

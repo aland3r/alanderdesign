@@ -1,0 +1,91 @@
+{
+  "$description": "Page, card and hero used by AuthLayout. Family tokens point at semantic tokens; a brand overrides one only when this family should differ from the brand's semantic default.",
+  "surface": {
+    "page": {
+      "background": {
+        "$type": "color",
+        "$value": "{color.background.page}"
+      },
+      "padding": {
+        "x": {
+          "$type": "dimension",
+          "$value": "{space.inset.md}"
+        },
+        "y": {
+          "$type": "dimension",
+          "$value": "{space.inset.lg}"
+        }
+      }
+    },
+    "card": {
+      "background": {
+        "$type": "color",
+        "$value": "{color.background.surface}"
+      },
+      "radius": {
+        "$type": "dimension",
+        "$value": "{radius.surface}"
+      },
+      "padding": {
+        "x": {
+          "$type": "dimension",
+          "$value": "{space.inset.lg}"
+        },
+        "y": {
+          "$type": "dimension",
+          "$value": "{space.stack.xl}"
+        }
+      }
+    },
+    "hero": {
+      "background": {
+        "$type": "color",
+        "$value": "{color.background.hero}"
+      },
+      "text": {
+        "$type": "color",
+        "$value": "{color.text.onHero}"
+      },
+      "accent": {
+        "$type": "color",
+        "$value": "{color.text.onHeroAccent}"
+      },
+      "headline": {
+        "family": {
+          "$type": "fontFamily",
+          "$value": "{font.family.heading}"
+        },
+        "size": {
+          "$type": "dimension",
+          "$value": "{font.size.display}"
+        },
+        "weight": {
+          "$type": "fontWeight",
+          "$value": "{font.weight.heading}"
+        },
+        "lineHeight": {
+          "$type": "number",
+          "$value": "{font.lineHeight.heading}"
+        },
+        "case": {
+          "$type": "other",
+          "$value": "{font.case.heading}"
+        }
+      },
+      "eyebrow": {
+        "size": {
+          "$type": "dimension",
+          "$value": "{font.size.caption}"
+        },
+        "weight": {
+          "$type": "fontWeight",
+          "$value": "{font.weight.label}"
+        },
+        "gap": {
+          "$type": "dimension",
+          "$value": "{space.stack.sm}"
+        }
+      }
+    }
+  }
+}

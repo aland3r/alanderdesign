@@ -3,7 +3,7 @@ import { Button } from '@alander/react'
 import { Canvas } from './Canvas'
 
 const meta = {
-  title: 'Components/Button',
+  title: 'Families/Button/Button',
   component: Button,
   decorators: [(Story) => <Canvas><Story /></Canvas>],
   args: { children: 'Entrar', variant: 'primary' },

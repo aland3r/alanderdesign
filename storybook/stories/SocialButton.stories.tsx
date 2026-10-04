@@ -3,7 +3,7 @@ import { SocialButton } from '@alander/react'
 import { Canvas } from './Canvas'
 
 const meta = {
-  title: 'Components/SocialButton',
+  title: 'Families/Button/SocialButton',
   component: SocialButton,
   decorators: [(Story) => <Canvas><div style={{ width: 360 }}><Story /></div></Canvas>],
   args: { fullWidth: true },
