@@ -14,7 +14,7 @@ export const Headings: Story = {
   render: () => (
     <>
       <Heading size="display">Display</Heading>
-      <Heading>Título</Heading>
+      <Heading>Title</Heading>
     </>
   ),
 }
@@ -22,15 +22,15 @@ export const Headings: Story = {
 export const Body: Story = {
   render: () => (
     <>
-      <Text tone="strong">Texto forte</Text>
-      <Text>Texto padrão</Text>
-      <Text tone="muted" size="small">Texto discreto, pequeno</Text>
-      <Text size="caption" tone="muted">Legenda</Text>
+      <Text tone="strong">Strong text</Text>
+      <Text>Default text</Text>
+      <Text tone="muted" size="small">Muted, small text</Text>
+      <Text size="caption" tone="muted">Caption</Text>
     </>
   ),
 }
 
 /** Landing-page highlight. Resize the canvas (or use the viewport toolbar) to see mobile, tablet and desktop sizes. */
 export const Headline: Story = {
-  render: () => <Heading size="headline">Aprenda com flashcards</Heading>,
+  render: () => <Heading size="headline">Learn with flashcards</Heading>,
 }

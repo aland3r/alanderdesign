@@ -15,7 +15,7 @@ const preview: Preview = {
     brand: {
       description: 'ADS brand',
       toolbar: {
-        title: 'Marca',
+        title: 'Brand',
         icon: 'paintbrush',
         items: [
           { value: 'base', title: 'Base (ADS)' },
@@ -33,7 +33,7 @@ const preview: Preview = {
     layout: 'fullscreen',
     a11y: { test: 'error' },
     // The first story in this order is shown on load: the welcome page.
-    options: { storySort: { order: ['Introdução', 'Patterns', ['Login'], 'Foundations', 'Families'] } },
+    options: { storySort: { order: ['Introduction', 'Patterns', ['Login'], 'Foundations', 'Families'] } },
   },
 }
 

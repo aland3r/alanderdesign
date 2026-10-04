@@ -79,7 +79,7 @@ function TokenTable({ by }: { by: 'kind' | 'family' }) {
       ? [...new Set(catalog.map((t) => t.group))].map((g) => [g, catalog.filter((t) => t.group === g).map((t) => t.name as string)] as const)
       : Object.keys(families).sort().map((f) => [f, catalog.map((t) => t.name as string).filter((n) => families[f].has(n))] as const)
   return (
-    <Table heading={by === 'family' ? 'Token semântico usado pela família' : 'Token semântico'}>
+    <Table heading={by === 'family' ? 'Semantic token used by the family' : 'Semantic token'}>
       {groups.flatMap(([title, names]) => [<Group key={title} title={title} />, ...names.map((n) => <Row key={`${title}-${n}`} name={n} />)])}
     </Table>
   )

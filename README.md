@@ -42,8 +42,8 @@ pnpm build-storybook  # static Storybook in storybook/storybook-static
 
 ## Guides
 
-- [Criar um componente pelo código](docs/guides/criar-componente-pelo-codigo.md)
-- [Criar um componente a partir do Figma](docs/guides/criar-componente-pelo-figma.md)
+- [Create a component from code](docs/guides/create-a-component-from-code.md)
+- [Create a component from Figma](docs/guides/create-a-component-from-figma.md)
 
 ## Using it in a product
 

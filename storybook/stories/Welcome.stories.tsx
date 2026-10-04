@@ -5,22 +5,22 @@ import { Heading, Link, Logo, Text } from '@alander/react'
 const repo = 'https://github.com/aland3r/alanderdesign/blob/main'
 
 const sections = [
-  { name: 'Patterns', what: 'Telas e blocos prontos, como o login de cada produto.' },
-  { name: 'Foundations', what: 'Os tokens: cores, tipografia, espaços e raios, com o valor de cada marca.' },
-  { name: 'Families', what: 'Os componentes, agrupados por família: Button, Field, Link, Alert, Text, Logo.' },
+  { name: 'Patterns', what: 'Ready-made screens and blocks, like each product’s login.' },
+  { name: 'Foundations', what: 'The tokens: color, typography, spacing and radii, with each brand’s value.' },
+  { name: 'Families', what: 'The components, grouped by family: Button, Field, Link, Alert, Text, Logo.' },
 ]
 
-const status: { component: string; family: string; state: 'Pronto' | 'Em construção' | 'Planejado' }[] = [
-  { component: 'Button', family: 'button', state: 'Pronto' },
-  { component: 'SocialButton', family: 'button', state: 'Pronto' },
-  { component: 'TextField', family: 'field', state: 'Pronto' },
-  { component: 'SearchField', family: 'field', state: 'Em construção' },
-  { component: 'Link', family: 'link', state: 'Pronto' },
-  { component: 'Alert', family: 'alert', state: 'Pronto' },
-  { component: 'Text, Heading', family: 'text', state: 'Pronto' },
-  { component: 'Logo', family: 'logo', state: 'Pronto' },
-  { component: 'AuthLayout, LoginForm', family: 'padrão', state: 'Pronto' },
-  { component: 'Accordion', family: 'accordion', state: 'Planejado' },
+const status: { component: string; family: string; state: 'Ready' | 'In progress' | 'Planned' }[] = [
+  { component: 'Button', family: 'button', state: 'Ready' },
+  { component: 'SocialButton', family: 'button', state: 'Ready' },
+  { component: 'TextField', family: 'field', state: 'Ready' },
+  { component: 'SearchField', family: 'field', state: 'In progress' },
+  { component: 'Link', family: 'link', state: 'Ready' },
+  { component: 'Alert', family: 'alert', state: 'Ready' },
+  { component: 'Text, Heading', family: 'text', state: 'Ready' },
+  { component: 'Logo', family: 'logo', state: 'Ready' },
+  { component: 'AuthLayout, LoginForm', family: 'pattern', state: 'Ready' },
+  { component: 'Accordion', family: 'accordion', state: 'Planned' },
 ]
 
 const page: CSSProperties = {
@@ -57,8 +57,8 @@ function Section({ title, children }: { title: string; children: ReactNode }) {
   )
 }
 
-/** Página de entrada do Storybook. Ela mesma usa os componentes e tokens do ADS, então muda com a marca da barra de cima. */
-function Welcome() {
+/** Storybook entry page. It is built with ADS components and tokens, so it follows the brand in the toolbar. */
+function WelcomePage() {
   return (
     <main style={page}>
       <div style={column}>
@@ -66,17 +66,17 @@ function Welcome() {
           <Logo size="lg" />
           <Heading size="display">Alander Design System</Heading>
           <Text tone="muted">
-            Um conjunto de componentes para Portfolio, Deviante e Flashbrix. Os componentes são os mesmos; o que muda
-            de um produto para o outro são os tokens. Troque a marca no botão da barra de cima e esta página muda junto.
+            One set of components for Portfolio, Deviante and Flashbrix. The components are the same; what changes from
+            one product to another is the tokens. Switch the brand in the toolbar and this page changes with it.
           </Text>
         </header>
 
-        <Section title="Princípios">
+        <Section title="Principles">
           <div style={grid}>
             {[
-              ['Um componente, várias marcas', 'Nenhum componente sabe qual marca está usando. Ele lê tokens, e a marca define os valores.'],
-              ['Duas camadas de tokens', 'Primitivos guardam os valores crus; semânticos dizem para que servem. Componentes leem só semânticos.'],
-              ['Acessível por padrão', 'HTML nativo, foco visível e contraste AA conferido no build.'],
+              ['One component, many brands', 'No component knows which brand it is using. It reads tokens, and the brand sets the values.'],
+              ['Two token layers', 'Primitives hold the raw values; semantic tokens say what they are for. Components read semantic tokens only.'],
+              ['Accessible by default', 'Native HTML, visible focus, and AA contrast checked in the build.'],
             ].map(([title, body]) => (
               <div key={title} style={card}>
                 <Text tone="strong">{title}</Text>
@@ -86,7 +86,7 @@ function Welcome() {
           </div>
         </Section>
 
-        <Section title="Como está organizado">
+        <Section title="How it is organized">
           <div style={grid}>
             {sections.map((s) => (
               <div key={s.name} style={card}>
@@ -97,26 +97,26 @@ function Welcome() {
           </div>
         </Section>
 
-        <Section title="Como começar">
-          <Text>Envolva o app no BrandProvider com a marca do produto e use os componentes:</Text>
+        <Section title="Getting started">
+          <Text>Wrap the app in BrandProvider with the product’s brand and use the components:</Text>
           <pre style={code}>{`import { BrandProvider, Button } from '@alander/react'
 
 <BrandProvider brand="base">
-  <Button>Começar</Button>
+  <Button>Get started</Button>
 </BrandProvider>`}</pre>
           <Text>
-            Para criar um componente novo, siga o guia{' '}
-            <Link href={`${repo}/docs/guides/criar-componente-pelo-codigo.md`} target="_blank" rel="noreferrer">pelo código</Link>
-            {' '}ou o guia{' '}
-            <Link href={`${repo}/docs/guides/criar-componente-pelo-figma.md`} target="_blank" rel="noreferrer">a partir do Figma</Link>.
+            To create a new component, follow the guide{' '}
+            <Link href={`${repo}/docs/guides/create-a-component-from-code.md`} target="_blank" rel="noreferrer">from code</Link>
+            {' '}or the guide{' '}
+            <Link href={`${repo}/docs/guides/create-a-component-from-figma.md`} target="_blank" rel="noreferrer">from Figma</Link>.
           </Text>
         </Section>
 
-        <Section title="Estado dos componentes">
+        <Section title="Component status">
           <table style={{ borderCollapse: 'collapse', width: '100%' }}>
             <thead>
               <tr>
-                {['Componente', 'Família', 'Estado'].map((h) => (
+                {['Component', 'Family', 'Status'].map((h) => (
                   <th key={h} style={cell}><Text size="small" tone="muted">{h}</Text></th>
                 ))}
               </tr>
@@ -126,7 +126,7 @@ function Welcome() {
                 <tr key={row.component}>
                   <td style={cell}><Text size="small" tone="strong">{row.component}</Text></td>
                   <td style={cell}><Text size="small">{row.family}</Text></td>
-                  <td style={cell}><Text size="small" tone={row.state === 'Pronto' ? 'strong' : 'muted'}>{row.state}</Text></td>
+                  <td style={cell}><Text size="small" tone={row.state === 'Ready' ? 'strong' : 'muted'}>{row.state}</Text></td>
                 </tr>
               ))}
             </tbody>
@@ -137,6 +137,6 @@ function Welcome() {
   )
 }
 
-const meta = { title: 'Introdução/Bem-vindo', component: Welcome } satisfies Meta<typeof Welcome>
+const meta = { title: 'Introduction/Welcome', component: WelcomePage } satisfies Meta<typeof WelcomePage>
 export default meta
-export const BemVindo: StoryObj<typeof meta> = { name: 'Bem-vindo' }
+export const Welcome: StoryObj<typeof meta> = {}

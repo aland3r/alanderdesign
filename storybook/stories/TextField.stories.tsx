@@ -13,6 +13,6 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Default: Story = {}
-export const WithHint: Story = { args: { hint: 'Use a conta autorizada pelo responsável.' } }
-export const WithError: Story = { args: { defaultValue: 'voce@', error: 'Digite um e-mail válido.' } }
+export const WithHint: Story = { args: { hint: 'Use the account your admin authorized.' } }
+export const WithError: Story = { args: { defaultValue: 'you@', error: 'Enter a valid email address.' } }
 export const Disabled: Story = { args: { disabled: true } }

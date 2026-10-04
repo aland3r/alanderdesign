@@ -11,5 +11,5 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const ErrorMessage: Story = {
-  render: () => <Alert>Não foi possível iniciar o login com Google.</Alert>,
+  render: () => <Alert>Couldn’t start Google sign-in.</Alert>,
 }
