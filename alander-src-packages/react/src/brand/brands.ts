@@ -10,6 +10,8 @@ export interface BrandConfig {
 }
 
 export const brandConfig: Record<Brand, BrandConfig> = {
+  base: { name: 'ADS', authLayout: 'centered' },
+  portfolio: { name: 'ALANDER', authLayout: 'centered' },
   deviante: { name: 'Deviante', authLayout: 'split' },
   flashbrix: { name: 'Flashbrix', authLayout: 'centered' },
 }

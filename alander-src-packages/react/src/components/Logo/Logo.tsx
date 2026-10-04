@@ -23,18 +23,19 @@ function DevianteMark() {
   )
 }
 
-/** The active brand's mark and wordmark. Swaps automatically with the BrandProvider. */
+/**
+ * The active brand's mark and wordmark. Swaps automatically with the BrandProvider.
+ * Portfolio is a wordmark only, as on the site header.
+ */
 export function Logo({ size = 'md', className }: LogoProps) {
   const brand = useBrand()
   const { name } = useBrandConfig()
 
   return (
     <span className={cx(styles.logo, styles[size], className)}>
-      {brand === 'flashbrix' ? (
-        <img src={flashbrixIsotype} alt="" className={styles.isotype} />
-      ) : (
-        <DevianteMark />
-      )}
+      {brand === 'flashbrix' ? <img src={flashbrixIsotype} alt="" className={styles.isotype} /> : null}
+      {brand === 'deviante' ? <DevianteMark /> : null}
+      {brand === 'base' ? <span className={styles.baseMark} aria-hidden="true" /> : null}
       <span className={styles.wordmark}>{name}</span>
     </span>
   )

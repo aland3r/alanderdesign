@@ -4,6 +4,7 @@
   font-weight: var(--font-weight-heading);
   line-height: var(--font-line-height-heading);
   color: var(--color-text-strong);
+  text-transform: var(--font-case-heading);
 }
 .title { font-size: var(--font-size-title); }
 .display { font-size: var(--font-size-display); }

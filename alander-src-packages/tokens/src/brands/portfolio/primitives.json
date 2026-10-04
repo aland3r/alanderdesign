@@ -1,0 +1,95 @@
+{
+  "$description": "Portfolio palette, taken from portfolio app/portfolio-tokens.css (arcadia + brand copper) and its fonts.",
+  "color": {
+    "ink": {
+      "1000": {
+        "$type": "color",
+        "$value": "#000000",
+        "$description": "--arcadia-bg"
+      },
+      "950": {
+        "$type": "color",
+        "$value": "#0a0a0a",
+        "$description": "--cases-read-surface"
+      },
+      "900": {
+        "$type": "color",
+        "$value": "#141414",
+        "$description": "--cases-panel-bg"
+      },
+      "800": {
+        "$type": "color",
+        "$value": "#222222",
+        "$description": "--arcadia-line"
+      },
+      "600": {
+        "$type": "color",
+        "$value": "#666666",
+        "$description": "--arcadia-muted"
+      },
+      "400": {
+        "$type": "color",
+        "$value": "#8d8d8d",
+        "$description": "Muted text. --arcadia-muted (#666) fails AA on black; this is the site's placeholder gray."
+      }
+    },
+    "paper": {
+      "100": {
+        "$type": "color",
+        "$value": "#f0f0f0",
+        "$description": "--arcadia-fg"
+      },
+      "300": {
+        "$type": "color",
+        "$value": "#d6d6d6",
+        "$description": "Hover for light buttons. Not in the Portfolio yet."
+      }
+    },
+    "purple": {
+      "300": {
+        "$type": "color",
+        "$value": "#b59cf8",
+        "$description": "--work-accent-purple"
+      }
+    },
+    "copper": {
+      "700": {
+        "$type": "color",
+        "$value": "#a31621",
+        "$description": "--brand-copper-bright"
+      },
+      "500": {
+        "$type": "color",
+        "$value": "#ff4d4d",
+        "$description": "--brand-copper-hot"
+      }
+    },
+    "alpha": {
+      "copper20": {
+        "$type": "color",
+        "$value": "rgba(163, 22, 33, 0.20)"
+      },
+      "purple40": {
+        "$type": "color",
+        "$value": "rgba(181, 156, 248, 0.40)"
+      }
+    }
+  },
+  "fontFamily": {
+    "carbonot": {
+      "$type": "fontFamily",
+      "$value": [
+        "Carbonot",
+        "monospace"
+      ]
+    },
+    "gtPlanar": {
+      "$type": "fontFamily",
+      "$value": [
+        "GT Planar",
+        "system-ui",
+        "sans-serif"
+      ]
+    }
+  }
+}

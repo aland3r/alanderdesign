@@ -1,10 +1,32 @@
-/* Deviante: Inter. Flashbrix: EB Garamond (Figma "headliner") and Tijolo (wordmark). */
+/*
+  Brand fonts.
+  - Deviante: Inter. Flashbrix: EB Garamond (Figma "headliner"). Both are open
+    fonts served by Google Fonts.
+  - Flashbrix wordmark: Tijolo. Portfolio: GT Planar (body) and Carbonot
+    (headings and wordmark). These are licensed fonts, so their files are not
+    published in this repository. The faces below use the copy each product
+    already ships, or one installed on the machine; otherwise the next font in
+    the token's stack is used.
+*/
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600&display=swap');
 
 @font-face {
   font-family: 'Tijolo';
-  src: url('../assets/fonts/Tijolo-Medium.woff2') format('woff2');
+  src: local('Tijolo Medium'), local('Tijolo-Medium');
   font-weight: 500;
-  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GT Planar';
+  src: local('GT Planar'), local('GTPlanar-Regular'), local('GT-Planar-VF');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Carbonot';
+  src: local('Carbonot Bold'), local('Carbonot-Bold');
+  font-weight: 700;
   font-display: swap;
 }

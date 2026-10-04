@@ -2,10 +2,11 @@ import { createContext, useContext, type ReactNode } from 'react'
 import { brandConfig, type Brand, type BrandConfig } from './brands'
 import '../styles/base.css'
 
-const BrandContext = createContext<Brand>('deviante')
+const BrandContext = createContext<Brand>('base')
 
 export interface BrandProviderProps {
-  brand: Brand
+  /** Defaults to the neutral ADS base. */
+  brand?: Brand
   children: ReactNode
   className?: string
 }
@@ -14,7 +15,7 @@ export interface BrandProviderProps {
  * Applies a brand to everything inside it. Tokens are CSS variables scoped to
  * `[data-brand]`, so switching brands is just changing this attribute.
  */
-export function BrandProvider({ brand, children, className }: BrandProviderProps) {
+export function BrandProvider({ brand = 'base', children, className }: BrandProviderProps) {
   return (
     <BrandContext.Provider value={brand}>
       <div data-brand={brand} className={className}>

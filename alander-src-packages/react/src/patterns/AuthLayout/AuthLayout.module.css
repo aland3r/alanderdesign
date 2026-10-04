@@ -63,6 +63,7 @@
   font-weight: var(--font-weight-heading);
   line-height: var(--font-line-height-heading);
   color: var(--color-text-on-hero);
+  text-transform: var(--font-case-heading);
 }
 
 @media (max-width: 800px) {

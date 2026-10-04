@@ -3,91 +3,95 @@
     "background": {
       "page": {
         "$type": "color",
-        "$value": "{color.mint.200}"
+        "$value": "{color.ink.1000}"
       },
       "surface": {
         "$type": "color",
-        "$value": "{color.navy.900}"
+        "$value": "{color.ink.1000}"
       },
       "hero": {
         "$type": "color",
-        "$value": "{color.cream.100}"
+        "$value": "{color.ink.950}"
       },
       "input": {
         "$type": "color",
-        "$value": "{color.navy.800}"
+        "$value": "{color.ink.900}"
       }
     },
     "text": {
       "default": {
         "$type": "color",
-        "$value": "{color.cream.100}"
+        "$value": "{color.paper.100}"
       },
       "strong": {
         "$type": "color",
-        "$value": "{color.cream.100}"
+        "$value": "{color.paper.100}"
       },
       "muted": {
         "$type": "color",
-        "$value": "{color.teal.200}"
+        "$value": "{color.ink.400}"
+      },
+      "onAction": {
+        "$type": "color",
+        "$value": "{color.ink.1000}"
       },
       "link": {
         "$type": "color",
-        "$value": "{color.indigo.300}"
+        "$value": "{color.purple.300}"
       },
       "brand": {
         "$type": "color",
-        "$value": "{color.indigo.300}"
+        "$value": "{color.copper.500}"
       },
       "onHero": {
         "$type": "color",
-        "$value": "{color.plum.700}"
+        "$value": "{color.paper.100}"
       },
       "onHeroAccent": {
         "$type": "color",
-        "$value": "{color.indigo.600}"
+        "$value": "{color.purple.300}"
       }
     },
     "border": {
       "default": {
         "$type": "color",
-        "$value": "{color.alpha.cream16}"
+        "$value": "{color.ink.800}"
       },
       "hover": {
         "$type": "color",
-        "$value": "{color.indigo.300}"
+        "$value": "{color.ink.600}"
       },
       "focus": {
         "$type": "color",
-        "$value": "{color.indigo.300}"
+        "$value": "{color.purple.300}"
       }
     },
     "action": {
       "primary": {
         "$type": "color",
-        "$value": "{color.indigo.600}"
+        "$value": "{color.paper.100}"
       },
       "primaryHover": {
         "$type": "color",
-        "$value": "{color.indigo.700}"
+        "$value": "{color.paper.300}"
       }
     },
     "feedback": {
       "error": {
         "text": {
           "$type": "color",
-          "$value": "{color.red.300}"
+          "$value": "{color.copper.500}"
         },
         "background": {
           "$type": "color",
-          "$value": "{color.red.alpha16}"
+          "$value": "{color.alpha.copper20}"
         }
       }
     },
     "focus": {
       "ring": {
         "$type": "color",
-        "$value": "{color.alpha.indigo40}"
+        "$value": "{color.alpha.purple40}"
       }
     }
   },
@@ -95,36 +99,47 @@
     "family": {
       "body": {
         "$type": "fontFamily",
-        "$value": "{fontFamily.system}"
+        "$value": "{fontFamily.gtPlanar}"
       },
       "heading": {
         "$type": "fontFamily",
-        "$value": "{fontFamily.ebGaramond}"
+        "$value": "{fontFamily.carbonot}"
       },
       "brand": {
         "$type": "fontFamily",
-        "$value": "{fontFamily.tijolo}"
+        "$value": "{fontFamily.carbonot}"
       }
     },
     "weight": {
       "heading": {
         "$type": "fontWeight",
-        "$value": "{fontWeight.regular}"
+        "$value": "{fontWeight.bold}"
       },
       "brand": {
         "$type": "fontWeight",
-        "$value": "{fontWeight.medium}"
+        "$value": "{fontWeight.bold}"
+      }
+    },
+    "case": {
+      "heading": {
+        "$type": "other",
+        "$value": "uppercase",
+        "$description": "Carbonot is set in capitals"
+      },
+      "brand": {
+        "$type": "other",
+        "$value": "uppercase"
       }
     }
   },
   "radius": {
     "control": {
       "$type": "dimension",
-      "$value": "{radius.lg}"
+      "$value": "{radius.sm}"
     },
     "surface": {
       "$type": "dimension",
-      "$value": "{radius.xl}"
+      "$value": "{radius.none}"
     }
   }
 }

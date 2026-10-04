@@ -1,49 +1,120 @@
 {
   "color": {
     "background": {
-      "page": { "$type": "color", "$value": "{color.navy.900}" },
-      "surface": { "$type": "color", "$value": "{color.navy.900}" },
-      "hero": { "$type": "color", "$value": "{color.navy.850}" },
-      "input": { "$type": "color", "$value": "{color.navy.750}" }
+      "page": {
+        "$type": "color",
+        "$value": "{color.navy.900}"
+      },
+      "surface": {
+        "$type": "color",
+        "$value": "{color.navy.900}"
+      },
+      "hero": {
+        "$type": "color",
+        "$value": "{color.navy.850}"
+      },
+      "input": {
+        "$type": "color",
+        "$value": "{color.navy.750}"
+      }
     },
     "text": {
-      "default": { "$type": "color", "$value": "{color.slate.400}" },
-      "strong": { "$type": "color", "$value": "{color.slate.200}" },
-      "muted": { "$type": "color", "$value": "{color.slate.400}" },
-      "onAction": { "$type": "color", "$value": "{color.white}" },
-      "link": { "$type": "color", "$value": "{color.red.300}" },
-      "brand": { "$type": "color", "$value": "{color.slate.200}" },
-      "onHero": { "$type": "color", "$value": "{color.slate.200}" },
-      "onHeroAccent": { "$type": "color", "$value": "{color.red.300}" }
+      "default": {
+        "$type": "color",
+        "$value": "{color.slate.400}"
+      },
+      "strong": {
+        "$type": "color",
+        "$value": "{color.slate.200}"
+      },
+      "muted": {
+        "$type": "color",
+        "$value": "{color.slate.400}"
+      },
+      "link": {
+        "$type": "color",
+        "$value": "{color.red.300}"
+      },
+      "brand": {
+        "$type": "color",
+        "$value": "{color.slate.200}"
+      },
+      "onHero": {
+        "$type": "color",
+        "$value": "{color.slate.200}"
+      },
+      "onHeroAccent": {
+        "$type": "color",
+        "$value": "{color.red.300}"
+      }
     },
     "border": {
-      "default": { "$type": "color", "$value": "{color.alpha.white07}" },
-      "hover": { "$type": "color", "$value": "{color.red.600}" },
-      "focus": { "$type": "color", "$value": "{color.red.600}" }
+      "default": {
+        "$type": "color",
+        "$value": "{color.alpha.white07}"
+      },
+      "hover": {
+        "$type": "color",
+        "$value": "{color.red.600}"
+      },
+      "focus": {
+        "$type": "color",
+        "$value": "{color.red.600}"
+      }
     },
     "action": {
-      "primary": { "$type": "color", "$value": "{color.red.600}" },
-      "primaryHover": { "$type": "color", "$value": "{color.red.800}" }
+      "primary": {
+        "$type": "color",
+        "$value": "{color.red.600}"
+      },
+      "primaryHover": {
+        "$type": "color",
+        "$value": "{color.red.800}"
+      }
     },
     "feedback": {
       "error": {
-        "text": { "$type": "color", "$value": "{color.red.300}" },
-        "background": { "$type": "color", "$value": "{color.alpha.red14}" }
+        "text": {
+          "$type": "color",
+          "$value": "{color.red.300}"
+        },
+        "background": {
+          "$type": "color",
+          "$value": "{color.alpha.red14}"
+        }
       }
     },
     "focus": {
-      "ring": { "$type": "color", "$value": "{color.alpha.red30}" }
+      "ring": {
+        "$type": "color",
+        "$value": "{color.alpha.red30}"
+      }
     }
   },
   "font": {
     "family": {
-      "body": { "$type": "fontFamily", "$value": "{fontFamily.inter}" },
-      "heading": { "$type": "fontFamily", "$value": "{fontFamily.inter}" },
-      "brand": { "$type": "fontFamily", "$value": "{fontFamily.inter}" }
+      "body": {
+        "$type": "fontFamily",
+        "$value": "{fontFamily.inter}"
+      },
+      "heading": {
+        "$type": "fontFamily",
+        "$value": "{fontFamily.inter}"
+      },
+      "brand": {
+        "$type": "fontFamily",
+        "$value": "{fontFamily.inter}"
+      }
     }
   },
   "radius": {
-    "control": { "$type": "dimension", "$value": "{radius.md}" },
-    "surface": { "$type": "dimension", "$value": "{radius.md}" }
+    "control": {
+      "$type": "dimension",
+      "$value": "{radius.md}"
+    },
+    "surface": {
+      "$type": "dimension",
+      "$value": "{radius.md}"
+    }
   }
 }

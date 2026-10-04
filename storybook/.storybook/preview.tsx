@@ -18,6 +18,8 @@ const preview: Preview = {
         title: 'Marca',
         icon: 'paintbrush',
         items: [
+          { value: 'base', title: 'Base (ADS)' },
+          { value: 'portfolio', title: 'Portfolio' },
           { value: 'deviante', title: 'Deviante' },
           { value: 'flashbrix', title: 'Flashbrix' },
         ],
@@ -25,7 +27,7 @@ const preview: Preview = {
       },
     },
   },
-  initialGlobals: { brand: 'deviante' },
+  initialGlobals: { brand: 'base' },
   decorators: [withBrand],
   parameters: {
     layout: 'fullscreen',
