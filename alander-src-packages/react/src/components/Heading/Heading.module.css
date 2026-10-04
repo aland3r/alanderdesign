@@ -1,0 +1,11 @@
+.heading {
+  margin: 0;
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-heading);
+  line-height: var(--font-line-height-heading);
+  color: var(--color-text-strong);
+}
+.title { font-size: var(--font-size-title); }
+.display { font-size: var(--font-size-display); }
+.start { text-align: start; }
+.center { text-align: center; }

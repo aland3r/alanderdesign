@@ -1,0 +1,41 @@
+{
+  "$description": "Flashbrix palette. Named colors come from the Flashbrix v1.0 Figma variables (mint, blank, rune, intercourse); indigo from the isotype; navy sampled from the Login section.",
+  "color": {
+    "mint": {
+      "200": { "$type": "color", "$value": "#cce6e2", "$description": "Figma variable: mint" }
+    },
+    "cream": {
+      "100": { "$type": "color", "$value": "#f5efe4", "$description": "Figma variable: blank" }
+    },
+    "teal": {
+      "500": { "$type": "color", "$value": "#698c95", "$description": "Figma variable: rune" },
+      "200": { "$type": "color", "$value": "#a9c6c9", "$description": "Lighter rune for muted text on navy (AA). Not in Figma yet." }
+    },
+    "plum": {
+      "700": { "$type": "color", "$value": "#4e374d", "$description": "Figma variable: intercourse" }
+    },
+    "indigo": {
+      "300": { "$type": "color", "$value": "#b7b5f2", "$description": "Light indigo for links on navy (AA). Not in Figma yet." },
+      "600": { "$type": "color", "$value": "#4541c0", "$description": "Wordmark and isotype" },
+      "700": { "$type": "color", "$value": "#36329e", "$description": "Hover state. Not in Figma yet." }
+    },
+    "navy": {
+      "900": { "$type": "color", "$value": "#1b2742", "$description": "Sampled from the Login card in Figma" },
+      "800": { "$type": "color", "$value": "#25324f", "$description": "Input fill on navy. Not in Figma yet." }
+    },
+    "red": {
+      "300": { "$type": "color", "$value": "#fda29b" },
+      "alpha16": { "$type": "color", "$value": "rgba(253, 162, 155, 0.16)" }
+    },
+    "alpha": {
+      "cream16": { "$type": "color", "$value": "rgba(245, 239, 228, 0.16)" },
+      "indigo40": { "$type": "color", "$value": "rgba(183, 181, 242, 0.40)" }
+    },
+    "white": { "$type": "color", "$value": "#ffffff" }
+  },
+  "fontFamily": {
+    "ebGaramond": { "$type": "fontFamily", "$value": ["EB Garamond", "Georgia", "serif"], "$description": "Figma text style: headliner" },
+    "tijolo": { "$type": "fontFamily", "$value": ["Tijolo", "system-ui", "sans-serif"] },
+    "system": { "$type": "fontFamily", "$value": ["system-ui", "Segoe UI", "Roboto", "sans-serif"] }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "$description": "Semantic tokens shared by every brand. Brands may override any of them in their own semantic.json.",
+  "space": {
+    "inset": {
+      "sm": { "$type": "dimension", "$value": "{space.2}" },
+      "md": { "$type": "dimension", "$value": "{space.4}" },
+      "lg": { "$type": "dimension", "$value": "{space.6}" }
+    },
+    "stack": {
+      "xs": { "$type": "dimension", "$value": "{space.2}" },
+      "sm": { "$type": "dimension", "$value": "{space.4}" },
+      "md": { "$type": "dimension", "$value": "{space.5}" },
+      "lg": { "$type": "dimension", "$value": "{space.6}" },
+      "xl": { "$type": "dimension", "$value": "{space.8}" }
+    }
+  },
+  "font": {
+    "size": {
+      "caption": { "$type": "dimension", "$value": "{fontSize.12}" },
+      "small": { "$type": "dimension", "$value": "{fontSize.14}" },
+      "body": { "$type": "dimension", "$value": "{fontSize.16}" },
+      "title": { "$type": "dimension", "$value": "{fontSize.32}" },
+      "display": { "$type": "dimension", "$value": "{fontSize.40}" }
+    },
+    "weight": {
+      "body": { "$type": "fontWeight", "$value": "{fontWeight.regular}" },
+      "label": { "$type": "fontWeight", "$value": "{fontWeight.semibold}" },
+      "heading": { "$type": "fontWeight", "$value": "{fontWeight.semibold}" },
+      "brand": { "$type": "fontWeight", "$value": "{fontWeight.semibold}" }
+    },
+    "lineHeight": {
+      "body": { "$type": "number", "$value": "{lineHeight.normal}" },
+      "heading": { "$type": "number", "$value": "{lineHeight.tight}" }
+    }
+  },
+  "size": {
+    "control": {
+      "height": { "$type": "dimension", "$value": "{size.control.md}" }
+    }
+  }
+}

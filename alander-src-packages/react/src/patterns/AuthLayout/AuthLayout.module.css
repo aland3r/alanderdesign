@@ -1,0 +1,75 @@
+.page {
+  min-height: 100vh;
+  background: var(--color-background-page);
+}
+
+/* Centered: one card on the page background (Flashbrix). */
+.centered {
+  display: grid;
+  place-items: center;
+  padding: var(--space-inset-lg) var(--space-inset-md);
+}
+
+.card {
+  width: min(448px, 100%);
+  padding: var(--space-stack-xl) var(--space-inset-lg);
+  border-radius: var(--radius-surface);
+  background: var(--color-background-surface);
+}
+
+/* Split: form on one side, brand hero on the other (Deviante). */
+.split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.formSide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-stack-xl) var(--space-inset-lg);
+  background: var(--color-background-surface);
+}
+
+.formInner {
+  width: min(400px, 100%);
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-stack-xl) var(--space-inset-lg);
+  background: var(--color-background-hero);
+}
+
+.heroContent {
+  max-width: 28rem;
+}
+
+.heroEyebrow {
+  margin: 0 0 var(--space-stack-sm);
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-label);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-on-hero-accent);
+}
+
+.heroHeadline {
+  margin: 0;
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-display);
+  font-weight: var(--font-weight-heading);
+  line-height: var(--font-line-height-heading);
+  color: var(--color-text-on-hero);
+}
+
+@media (max-width: 800px) {
+  .split {
+    grid-template-columns: 1fr;
+  }
+  .hero {
+    display: none;
+  }
+}

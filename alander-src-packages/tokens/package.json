@@ -1,0 +1,24 @@
+{
+  "name": "@alander/tokens",
+  "version": "0.1.0",
+  "description": "Alander Design System (ADS) design tokens: per-brand primitives and a shared semantic contract.",
+  "type": "module",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "exports": {
+    "./web/deviante.css": "./dist/web/deviante.css",
+    "./web/flashbrix.css": "./dist/web/flashbrix.css",
+    "./web/all.css": "./dist/web/all.css",
+    "./web/tokens": "./dist/web/tokens.js",
+    "./brands/*.json": "./dist/json/*.json"
+  },
+  "scripts": {
+    "build": "node build.mjs",
+    "typecheck": "node build.mjs --check && node build.mjs && node check-contrast.mjs"
+  },
+  "devDependencies": {
+    "style-dictionary": "^5.0.0"
+  }
+}

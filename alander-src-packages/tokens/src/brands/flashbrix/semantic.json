@@ -1,0 +1,53 @@
+{
+  "color": {
+    "background": {
+      "page": { "$type": "color", "$value": "{color.mint.200}" },
+      "surface": { "$type": "color", "$value": "{color.navy.900}" },
+      "hero": { "$type": "color", "$value": "{color.cream.100}" },
+      "input": { "$type": "color", "$value": "{color.navy.800}" }
+    },
+    "text": {
+      "default": { "$type": "color", "$value": "{color.cream.100}" },
+      "strong": { "$type": "color", "$value": "{color.cream.100}" },
+      "muted": { "$type": "color", "$value": "{color.teal.200}" },
+      "onAction": { "$type": "color", "$value": "{color.white}" },
+      "link": { "$type": "color", "$value": "{color.indigo.300}" },
+      "brand": { "$type": "color", "$value": "{color.indigo.300}" },
+      "onHero": { "$type": "color", "$value": "{color.plum.700}" },
+      "onHeroAccent": { "$type": "color", "$value": "{color.indigo.600}" }
+    },
+    "border": {
+      "default": { "$type": "color", "$value": "{color.alpha.cream16}" },
+      "hover": { "$type": "color", "$value": "{color.indigo.300}" },
+      "focus": { "$type": "color", "$value": "{color.indigo.300}" }
+    },
+    "action": {
+      "primary": { "$type": "color", "$value": "{color.indigo.600}" },
+      "primaryHover": { "$type": "color", "$value": "{color.indigo.700}" }
+    },
+    "feedback": {
+      "error": {
+        "text": { "$type": "color", "$value": "{color.red.300}" },
+        "background": { "$type": "color", "$value": "{color.red.alpha16}" }
+      }
+    },
+    "focus": {
+      "ring": { "$type": "color", "$value": "{color.alpha.indigo40}" }
+    }
+  },
+  "font": {
+    "family": {
+      "body": { "$type": "fontFamily", "$value": "{fontFamily.system}" },
+      "heading": { "$type": "fontFamily", "$value": "{fontFamily.ebGaramond}" },
+      "brand": { "$type": "fontFamily", "$value": "{fontFamily.tijolo}" }
+    },
+    "weight": {
+      "heading": { "$type": "fontWeight", "$value": "{fontWeight.regular}" },
+      "brand": { "$type": "fontWeight", "$value": "{fontWeight.medium}" }
+    }
+  },
+  "radius": {
+    "control": { "$type": "dimension", "$value": "{radius.lg}" },
+    "surface": { "$type": "dimension", "$value": "{radius.xl}" }
+  }
+}

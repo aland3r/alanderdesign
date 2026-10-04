@@ -1,0 +1,10 @@
+/* Deviante: Inter. Flashbrix: EB Garamond (Figma "headliner") and Tijolo (wordmark). */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600&display=swap');
+
+@font-face {
+  font-family: 'Tijolo';
+  src: url('../assets/fonts/Tijolo-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
