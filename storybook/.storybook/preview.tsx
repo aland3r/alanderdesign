@@ -32,8 +32,8 @@ const preview: Preview = {
   parameters: {
     layout: 'fullscreen',
     a11y: { test: 'error' },
-    // Opens on the login screen: the first story in this order is shown on load.
-    options: { storySort: { order: ['Patterns', ['Login'], 'Foundations', 'Families'] } },
+    // The first story in this order is shown on load: the welcome page.
+    options: { storySort: { order: ['Introdução', 'Patterns', ['Login'], 'Foundations', 'Families'] } },
   },
 }
 
